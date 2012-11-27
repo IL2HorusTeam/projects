@@ -1,0 +1,3 @@
+[submodule "Commander"]
+	path = Commander
+	url = git@github.com:IL2HorusTeam/Horus-Commander.git
