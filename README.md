@@ -3,8 +3,7 @@
 [IL-2 Sturmovik]  dedicated server controlling and statistics gathering system. 
 Includes  server commander, web application and missions generator.
 
-This project is an alternative to [IL2 Server Commander] and [FBDaemon]. 
-Is project is a continuation of [oblalex/horus].
+This project is an alternative to [IL2 Server Commander] and [FBDaemon] and a continuation of [oblalex/horus].
 
 Contacts
 ---
