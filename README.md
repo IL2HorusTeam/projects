@@ -8,6 +8,7 @@ This project is an alternative to [IL2 Server Commander] and [FBDaemon] and a co
 Contacts
 ---
 
+* Visit [our Wiki] to get all existing information about this project.<br/>
 * Visit [our group] to ask questions.<br/>
 * Check [our twitter] for news.
 
@@ -17,3 +18,4 @@ Contacts
 [oblalex/horus]:https://github.com/oblalex/horus
 [our group]:https://groups.google.com/forum/?hl=en&fromgroups#!forum/il-2-horus-commander
 [our twitter]:https://twitter.com/IL2HorusTeam
+[our Wiki]:http://il2-horus-system.wikia.com/wiki/IL-2_Horus_System_Wiki
