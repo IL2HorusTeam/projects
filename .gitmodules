@@ -1,3 +1,6 @@
 [submodule "Commander"]
 	path = Commander
 	url = git@github.com:IL2HorusTeam/Horus-Commander.git
+[submodule "Web"]
+	path = Web
+	url = git@github.com:IL2HorusTeam/Horus-Web.git
