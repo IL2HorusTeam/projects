@@ -2,3 +2,6 @@
 	path = Commander
 	url = git@github.com:IL2HorusTeam/Horus-Commander.git
 
+[submodule "desktop"]
+	path = desktop
+	url = git@github.com:IL2HorusTeam/desktop.git
