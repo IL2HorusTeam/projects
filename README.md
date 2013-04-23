@@ -5,17 +5,15 @@ Includes  server commander, web application and missions generator.
 
 This project is an alternative to [IL2 Server Commander] and [FBDaemon] and a continuation of [oblalex/horus].
 
-Contacts
+Links
 ---
 
-* Visit [our Wiki] to get all existing information about this project.<br/>
-* Visit [our group] to ask questions.<br/>
-* Check [our twitter] for news.
+* Check [this forum](http://ost.io/@IL2HorusTeam/Horus-System/topics/2) topic for recent news.
+* View [list of project forums](http://ost.io/@IL2HorusTeam/Horus-System/topics/3).
+* Look [new ideas discussions](http://ost.io/@IL2HorusTeam/Horus-System/topics/1) (participation appreciated!).
+* We've got a [twitter channel](https://twitter.com/IL2HorusTeam) also.
 
 [IL-2 Sturmovik]:http://en.wikipedia.org/wiki/IL-2_Sturmovik_(video_game)
 [IL2 Server Commander]:http://wiki.sturmovik.de/index.php?title=IL2_Server_Commander_English_Version
 [FBDaemon]:http://wiki.sturmovik.de/index.php?title=FBDaemon
 [oblalex/horus]:https://github.com/oblalex/horus
-[our group]:https://groups.google.com/forum/?hl=en&fromgroups#!forum/il-2-horus-commander
-[our twitter]:https://twitter.com/IL2HorusTeam
-[our Wiki]:http://il2-horus-system.wikia.com/wiki/IL-2_Horus_System_Wiki
