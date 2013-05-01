@@ -1,9 +1,11 @@
+Synopsis
+---
+
 ![Horus](https://raw.github.com/oblalex/horus/gh-pages/img/horus_black.png)
 
-[IL-2 Sturmovik]  dedicated server controlling and statistics gathering system. 
-Includes  server commander, web application and missions generator.
-
-This project is an alternative to [IL2 Server Commander] and [FBDaemon] and a continuation of [oblalex/horus].
+IL2 Horus System is a set of open-source projects related to [IL-2 Sturmovik].
+There are desktop and web applications.
+Creating applications for mobile platforms is future-planned.
 
 Links
 ---
@@ -14,6 +16,3 @@ Links
 * We've got a [twitter channel](https://twitter.com/IL2HorusTeam) also.
 
 [IL-2 Sturmovik]:http://en.wikipedia.org/wiki/IL-2_Sturmovik_(video_game)
-[IL2 Server Commander]:http://wiki.sturmovik.de/index.php?title=IL2_Server_Commander_English_Version
-[FBDaemon]:http://wiki.sturmovik.de/index.php?title=FBDaemon
-[oblalex/horus]:https://github.com/oblalex/horus
