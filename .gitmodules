@@ -1,0 +1,42 @@
+[submodule "ds-middleware"]
+	path = ds-middleware
+	url = git@github.com:IL2HorusTeam/il2ds-middleware.git
+[submodule "ds-log-parser"]
+	path = ds-log-parser
+	url = git@github.com:IL2HorusTeam/il2ds-log-parser.git
+[submodule "maps/heightmap-creator"]
+	path = maps/heightmap-creator
+	url = git@github.com:IL2HorusTeam/il2-heightmap-creator.git
+[submodule "maps/leaflet.horus-maps"]
+	path = maps/leaflet.horus-maps
+	url = git@github.com:IL2HorusTeam/leaflet.horus-maps.git
+[submodule "maps/leaflet.coordinates"]
+	path = maps/leaflet.coordinates
+	url = git@github.com:IL2HorusTeam/leaflet.coordinates.git
+[submodule "maps/maps"]
+	path = maps/maps
+	url = git@github.com:IL2HorusTeam/maps.git
+[submodule "maps/leaflet.measure"]
+	path = maps/leaflet.measure
+	url = git@github.com:IL2HorusTeam/leaflet.measure.git
+[submodule "maps/leaflet.fullscreen"]
+	path = maps/leaflet.fullscreen
+	url = git@github.com:IL2HorusTeam/leaflet.fullscreen.git
+[submodule "maps/map-tools"]
+	path = maps/map-tools
+	url = git@github.com:IL2HorusTeam/web-map-tools.git
+[submodule "ds-events-commander"]
+	path = ds-events-commander
+	url = git@github.com:IL2HorusTeam/il2ds-events-commander.git
+[submodule "ds-web-console"]
+	path = ds-web-console
+	url = git@github.com:IL2HorusTeam/il2ds-web-console.git
+[submodule "ds-config-editor"]
+	path = ds-config-editor
+	url = git@github.com:IL2HorusTeam/il2ds-config-editor.git
+[submodule "data-center"]
+	path = data-center
+	url = git@github.com:IL2HorusTeam/il2-data-center.git
+[submodule "django-il2-domain"]
+	path = django-il2-domain
+	url = git@github.com:IL2HorusTeam/django-il2-domain.git
