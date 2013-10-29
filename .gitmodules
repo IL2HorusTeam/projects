@@ -1,6 +1,0 @@
-[submodule "desktop"]
-	path = desktop
-	url = git@github.com:IL2HorusTeam/desktop.git
-[submodule "web"]
-	path = web
-	url = git@github.com:IL2HorusTeam/web.git
