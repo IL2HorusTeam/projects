@@ -2,7 +2,7 @@ IL-2 Horus Team Projects
 ========================
 
 This is the root of a set of projects developed by IL-2 Horus Team. These
-projects are related to [IL-2 Sturmovik](http://en.wikipedia.org/wiki/IL-2_Sturmovik_(game)).
+projects are related to [IL-2 Sturmovik](http://en.wikipedia.org/wiki/IL-2_Sturmovik_%28game%29).
 
 The main purpose is creation of free tools, online services and dedicated
 server commanders for IL-2, providing support of its latest patches and
