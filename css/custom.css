@@ -1,0 +1,90 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav,
+section, summary {
+  display: block;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background: #FFF;
+  color: #444;
+}
+
+.wrapper {
+  width: 100%;
+  min-width: 700px;
+  height: 100vh;
+}
+
+
+/* Middle -------------------------------------------------------------------*/
+.middle {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.middle:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  float: left;
+  overflow: hidden;
+}
+.content {
+  height: 100vh;
+  padding: 0 0 0 271px;
+}
+
+/* Diagram ----------------------------------------------------------------- */
+.cell {
+  border: solid 1px white;
+  font: 10px sans-serif;
+  line-height: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
+}
+
+.link {
+  stroke: #000;
+  stroke-opacity: .5;
+  fill: none;
+}
+
+/* Left Sidebar -------------------------------------------------------------*/
+.left-sidebar {
+  height: 100vh;
+  float: left;
+  width: 270px;
+  margin-left: -100%;
+  position: relative;
+  background-color: #814568;
+  color: #fff;
+}
+
+header {
+  padding: 20px 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #531C3C;
+  background-color: #5F2949;
+  color: #FFF;
+}
+
+header h3 {
+  font: bold 24px "Oswald", Helvetica, Arial, sans-serif;
+}
+
+header legend {
+  font: italic 14px "Lato", Helvetica, Arial, sans-serif;
+}

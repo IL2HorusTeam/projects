@@ -1,0 +1,198 @@
+[
+  {
+    "name": "candv.candv",
+    "type": "library",
+    "state": "ready",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "candv.django-candv-choices",
+    "type": "library",
+    "state":"ready",
+    "requirements":[
+      "candv.candv"
+    ]
+  },
+  {
+    "name": "verboselib",
+    "type": "library",
+    "state": "ready",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "tx-logging",
+    "type": "library",
+    "state": "ready",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "il2fb.demo.bug-reporter",
+    "type": "library",
+    "state": "ready",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "il2fb.il2fb-commons",
+    "type": "library",
+    "state": "ready",
+    "requirements": [
+      "candv.candv", "verboselib"
+    ]
+  },
+  {
+    "name": "il2fb.il2fb-difficulty",
+    "type": "library",
+    "state": "ready",
+    "requirements": [
+      "candv.candv", "verboselib", "il2fb.il2fb-commons"
+    ]
+  },
+  {
+    "name": "il2fb.demo.di-2",
+    "type": "application",
+    "state": "ready",
+    "requirements": [
+      "il2fb.il2fb-difficulty"
+    ]
+  },
+  {
+    "name": "il2fb.parsers.il2fb-mission-parser",
+    "type": "library",
+    "state": "ready",
+    "requirements": [
+      "il2fb.il2fb-commons"
+    ]
+  },
+  {
+    "name": "il2fb.demo.il2fb-mission-parser-demo",
+    "type": "application",
+    "state": "ready",
+    "requirements": [
+      "il2fb.parsers.il2fb-mission-parser"
+    ],
+    "requirements": [
+      "il2fb.demo.bug-reporter"
+    ]
+  },
+  {
+    "name": "il2fb.parsers.il2fb-events-parser",
+    "type": "library",
+    "state": "ready",
+    "requirements": [
+      "il2fb.il2fb-commons", "verboselib", "candv.candv"
+    ]
+  },
+  {
+    "name": "il2fb.demo.il2fb-events-parser-demo",
+    "type": "application",
+    "state": "ready",
+    "requirements": [
+      "il2fb.parsers.il2fb-events-parser", "il2fb.demo.bug-reporter"
+    ]
+  },
+  {
+    "name": "il2fb.parsers.il2fb-console-parser",
+    "type": "library",
+    "state": "planned",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "il2fb.demo.il2fb-console-parser-demo",
+    "type": "application",
+    "state": "planned",
+    "requirements": [
+      "il2fb.parsers.il2fb-console-parser", "il2fb.demo.bug-reporter"
+    ]
+  },
+  {
+    "name": "il2fb.ds.il2fb-ds-config",
+    "type": "library",
+    "state": "planned",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "il2fb.demo.ci-2",
+    "type": "application",
+    "state": "planned",
+    "requirements": [
+      "il2fb.ds.il2fb-ds-config", "il2fb.demo.bug-reporter"
+    ]
+  },
+  {
+    "name": "il2fb.ds.il2fb-ds-emulator",
+    "type": "library",
+    "state": "planned",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "il2fb.ds.il2fb-ds-middleware",
+    "type": "library",
+    "state": "ready",
+    "requirements": [
+      "il2fb.ds.il2fb-ds-emulator", "tx-logging"
+    ]
+  },
+  {
+    "name": "il2fb.commander.minic",
+    "type": "application",
+    "state": "freezed",
+    "requirements": [
+      "tx-logging", "verboselib", "il2fb.ds.il2fb-ds-middleware"
+    ]
+  },
+  {
+    "name": "il2fb.il2fb-heightmap-creator",
+    "type": "application",
+    "state": "ready",
+    "requirements": [
+      "il2fb.ds.il2fb-ds-middleware"
+    ]
+  },
+  {
+    "name": "il2fb.il2fb-navigator",
+    "type": "library",
+    "state": "planned",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "il2fb.il2fb-fuselage",
+    "type": "library",
+    "state": "planned",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "il2fb.il2fb-gennadich-adapter",
+    "type": "library",
+    "state": "planned",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "il2fb.web-map-tools",
+    "type": "application",
+    "state": "freezed",
+    "requirements": [
+      "il2fb.il2fb-navigator"
+    ]
+  },
+  {
+    "name": "il2fb.commander.il2ds-events-commander",
+    "type": "application",
+    "state": "freezed",
+    "requirements": [
+      "tx-logging", "il2fb.ds.il2fb-ds-middleware", "il2fb.il2fb-navigator",
+      "il2fb.il2fb-difficulty", "il2fb.parsers.il2fb-mission-parser",
+      "il2fb.il2fb-commons", "il2fb.parsers.il2fb-events-parser",
+      "il2fb.parsers.il2fb-console-parser", "il2fb.ds.il2fb-ds-config"
+    ]
+  }
+]
