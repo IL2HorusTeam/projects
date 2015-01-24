@@ -18,7 +18,7 @@ body {
 
 .wrapper {
   width: 100%;
-  min-width: 700px;
+  min-width: 350px;
   height: 100vh;
 }
 
@@ -42,30 +42,14 @@ body {
 }
 .content {
   height: 100vh;
-  padding: 0 0 0 271px;
-}
-
-/* Diagram ----------------------------------------------------------------- */
-.cell {
-  border: solid 1px white;
-  font: 10px sans-serif;
-  line-height: 12px;
-  overflow: hidden;
-  position: absolute;
-  text-indent: 2px;
-}
-
-.link {
-  stroke: #000;
-  stroke-opacity: .5;
-  fill: none;
+  padding: 0 0 0 241px;
 }
 
 /* Left Sidebar -------------------------------------------------------------*/
 .left-sidebar {
   height: 100vh;
   float: left;
-  width: 270px;
+  width: 240px;
   margin-left: -100%;
   position: relative;
   background-color: #814568;
@@ -87,4 +71,49 @@ header h3 {
 
 header legend {
   font: italic 14px "Lato", Helvetica, Arial, sans-serif;
+  margin: auto;
+}
+
+/* Diagram ----------------------------------------------------------------- */
+.cell {
+  border: solid 1px white;
+  font: 10px sans-serif;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  display: table;
+}
+
+.cell > span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.link {
+  stroke: #000;
+  stroke-opacity: .5;
+  fill: none;
+}
+
+.ready {
+  background: #95CF80;
+}
+
+.in-progress {
+  background: #F3DA75;
+}
+
+.updating {
+  background: #C69BF2;
+}
+
+.freezed {
+  background: #B4C9F2;
+}
+
+.planned {
+  background: #E0E0E0;
+}
+
+.application {
 }

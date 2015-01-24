@@ -112,7 +112,7 @@
   {
     "name": "il2fb.ds.il2fb-ds-config",
     "type": "library",
-    "state": "planned",
+    "state": "in-progress",
     "requirements": [
     ]
   },
