@@ -8,8 +8,9 @@
 
   <title>IL-2 Horus Team Projects</title>
 
-  <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Fira+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
@@ -74,31 +75,31 @@ $(document).ready(function() {
         .append("span")
         .text(function(d) { return d.children ? null : d.key; });
 
-    var svg = div.append("svg")
+    // var svg = div.append("svg")
 
-    svg.style("position", "absolute")
-      .attr("width", primary_width)
-      .attr("height", primary_height)
-      .selectAll(".link")
-        .data(bundle(links))
-      .enter().append("path")
-        .attr("class", "link")
-        .attr("d", line)
-        .style("stroke", "black");
+    // svg.style("position", "absolute")
+    //   .attr("width", primary_width)
+    //   .attr("height", primary_height)
+    //   .selectAll(".link")
+    //     .data(bundle(links))
+    //   .enter().append("path")
+    //     .attr("class", "link")
+    //     .attr("d", line)
+    //     .style("stroke", "black");
 
     d3.select(window).on("resize", resize);
 
     function resize() {
       width = content.width(), height = content.height();
       div.style("width", width + "px").style("height", height + "px");
-      svg.attr("width", width).attr("height", height);
+      // svg.attr("width", width).attr("height", height);
       treemap.size([width, height]);
 
       var nodes = treemap.nodes(packages.root(items)),
           links = packages.requirements(nodes);
 
       div.selectAll(".cell").data(nodes).call(cell);
-      svg.selectAll(".link").data(bundle(links)).attr("d", line)
+      // svg.selectAll(".link").data(bundle(links)).attr("d", line)
     }
   })
 
