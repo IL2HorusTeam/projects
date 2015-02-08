@@ -6,31 +6,47 @@
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <title>IL-2 Horus Team Projects</title>
+  <title>IL-2 Horus Team's Projects</title>
 
   <link href='//fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Fira+Sans:400,700' rel='stylesheet' type='text/css'>
+
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="/octicons/octicons.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 
 <div class="wrapper">
   <div class="middle">
-
     <div class="container">
       <main class="content"></main>
     </div>
 
-    <aside class="left-sidebar">
+    <aside class="sidebar">
+      <span class="mega-octicon octicon-info sidebar-control show-sidebar" title="Show info"></span>
+    </aside>
+
+    <div class="sidebar-content">
       <header>
-        <h3>IL-2 Horus Team</h3>
-        <legend>projects and their relationships</legend>
+        <div class="main">
+          <h3>IL-2 Horus Team's</h3>
+          <legend>projects and their relationships</legend>
+        </div>
+        <div class="controls">
+          <span class="mega-octicon octicon-x sidebar-control hide-sidebar" title="Hide info"></span>
+        </div>
+        <div class="clear"></div>
       </header>
 
       // this page is in progress
-    </aside>
+
+      <section class="links">
+        <a href="https://github.com/IL2HorusTeam" target="_blank" title="Team repositories"><span class="mega-octicon octicon-repo"></span></a>
+        <a href="https://github.com/orgs/IL2HorusTeam/people" target="_blank" title="Team members"><span class="mega-octicon octicon-organization"></span></a>
+      </section>
+    </div>
 
   </div>
 </div>
@@ -40,6 +56,10 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
+
+  $('.sidebar-control').on('click', function() {
+    $('.sidebar-content').toggleClass('visible');
+  })
 
   var content = $('.content'),
       primary_width = content.width(),

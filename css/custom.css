@@ -22,6 +22,10 @@ body {
   height: 100vh;
 }
 
+.clear {
+  clear: both;
+}
+
 
 /* Middle -------------------------------------------------------------------*/
 .middle {
@@ -42,27 +46,89 @@ body {
 }
 .content {
   height: 100vh;
-  padding: 0 0 0 241px;
+  padding: 0 0 0 52px;
 }
 
 /* Left Sidebar -------------------------------------------------------------*/
-.left-sidebar {
+.sidebar {
   height: 100vh;
-  float: left;
-  width: 240px;
-  margin-left: -100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+}
+
+.show-sidebar {
+  background: #5F2949;
+  display: block;
   position: relative;
+  border-radius: 3px;
+  padding: 6px 7px;
+  float: left;
+  margin: 17px 5px 5px 5px;
+  outline: none;
+  color: #FFF;
+}
+
+.show-sidebar:hover {
   background-color: #814568;
-  color: #fff;
+}
+
+.hide-sidebar {
+  color: #A68CA6;
+}
+
+.hide-sidebar:hover {
+  color: #FFF;
+  background-color: #FFF;
+  border-radius: 3px;
+  padding: 0px 5px;
+  color: #814568;
+}
+
+.show-sidebar:hover, .hide-sidebar:hover {
+  cursor: pointer;
+}
+
+.sidebar-content {
+  position: absolute;
+  width: 282px;
+  left: -282px;
+  height: 100vh;
+  color: #FFF;
+  background-color: #814568;
+  border-right: 1px solid #FFF;
+
+  -webkit-transition: left 0.3s ease-in-out;
+  -moz-transition: left 0.3s ease-in-out;
+  -ms-transition: left 0.3s ease-in-out;
+  -o-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar-content.visible {
+  left: 0;
 }
 
 header {
-  padding: 20px 5px;
+  padding: 20px 0;
   text-align: center;
   margin-bottom: 20px;
   border-bottom: 1px solid #531C3C;
   background-color: #5F2949;
   color: #FFF;
+}
+
+header .main {
+  float: left;
+  width: 230px;
+  padding: 0 5px;
+}
+
+header .controls {
+  width: 42px;
+  float: right;
+  padding-top: 3px;
 }
 
 header h3 {
@@ -72,6 +138,22 @@ header h3 {
 header legend {
   font: italic 14px "Lato", Helvetica, Arial, sans-serif;
   margin: auto;
+}
+
+section.links {
+  text-align: center;
+  margin-top: 10px;
+}
+
+section.links a {
+  color: #C095C0;
+  text-decoration: none;
+  padding: 0 5px;
+  outline: none;
+}
+
+section.links a:hover {
+  color: #FFF;
 }
 
 /* Diagram ----------------------------------------------------------------- */
