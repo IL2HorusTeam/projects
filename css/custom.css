@@ -175,17 +175,24 @@ section.links a:hover {
 
   transition-property: height, width, top, left, background, color;
 }
-.cell:hover {
-  cursor: pointer;
-}
 .cell.active {
   z-index: 1;
   box-shadow: 0 0 15px #000;
+}
+.cell:not(.container):hover {
+  cursor: pointer;
 }
 
 .cell > span {
   display: table-cell;
   vertical-align: middle;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .link {

@@ -91,11 +91,21 @@ $(document).ready(function() {
         .data(nodes)
       .enter().append("div")
         .attr("class", function(d) {
-          return d.children ? "cell" : ["cell", d.type, d.state].join(" ");
+          return d.children
+                 ? "cell container"
+                 : ["cell", d.type, d.state].join(" ");
         })
         .call(cell)
         .append("span")
         .text(function(d) { return d.children ? null : d.key; });
+
+    nodes.forEach(function (node, i) {
+      if (!node.children) {
+        node.__element__ = $('.cell:not(.container)').filter(function () {
+          return $(this).find('span').text() == node.key
+        })[0]
+      }
+    })
 
     // var svg = div.append("svg")
 
@@ -109,46 +119,42 @@ $(document).ready(function() {
     //     .attr("d", line)
     //     .style("stroke", "black");
 
-    function activate(element) {
-      element.addClass('active')
-    }
+    $('.cell:not(.container)').on('click', function() {
 
-    function deactivate(element) {
-      element.removeClass('active')
-    }
+      function activate(element) {
+        $(element).addClass('active')
 
-    $('.cell.application, .cell.library').on('click', function() {
-        var self = $(this)
+        var cells = nodes
+          .filter(function (node) {
+            return (
+              node != element.__data__
+              && !node.children
+              && element.__data__.requirements.indexOf(node.name) < 0
+            )
+          })
+          .map(function (node) {
+            return node.__element__;
+          })
+        $(cells).hide()
+      }
 
-        if (self.hasClass('active')) {
-          deactivate(self)
-        } else {
-          var active = $('.cell.active')
+      function deactivate(element) {
+        $(element).removeClass('active')
+        $('.cell').show()
+      }
 
-          if (active.length) {
-            deactivate(active)
-          }
+      if ($(this).hasClass('active')) {
+        deactivate(this)
+      } else {
+        var active = $('.cell.active')
 
-          activate(self)
+        if (active.length) {
+          deactivate(active)
         }
 
-        // console.log(this) // div
-        // console.log(d3.event.target) // span
-        // console.log(d3.event.target.__data__) // datum
-        // console.log(d) // datum
-
-        // var targets = links
-        //   .filter(function (element) {
-        //     return element.source == d;
-        //   })
-        //   .map(function (element) {
-        //     return element.target
-        //   })
-
-        // console.log(targets)
-
-        // d3.event.preventDefault();
-      })
+        activate(this)
+      }
+    })
 
     d3.select(window).on("resize", function() {
 
