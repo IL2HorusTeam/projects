@@ -40,7 +40,8 @@
     "type": "library",
     "state": "ready",
     "requirements": [
-      "candv.candv", "verboselib"
+      "candv.candv"
+      , "verboselib"
     ]
   },
   {
@@ -48,7 +49,9 @@
     "type": "library",
     "state": "ready",
     "requirements": [
-      "candv.candv", "verboselib", "il2fb.il2fb-commons"
+      "candv.candv"
+      , "il2fb.il2fb-commons"
+      , "verboselib"
     ]
   },
   {
@@ -72,10 +75,8 @@
     "type": "application",
     "state": "ready",
     "requirements": [
-      "il2fb.parsers.il2fb-mission-parser"
-    ],
-    "requirements": [
       "il2fb.demo.bug-reporter"
+      , "il2fb.parsers.il2fb-mission-parser"
     ]
   },
   {
@@ -83,7 +84,9 @@
     "type": "library",
     "state": "ready",
     "requirements": [
-      "il2fb.il2fb-commons", "verboselib", "candv.candv"
+      "candv.candv"
+      , "il2fb.il2fb-commons"
+      , "verboselib"
     ]
   },
   {
@@ -91,7 +94,8 @@
     "type": "application",
     "state": "ready",
     "requirements": [
-      "il2fb.parsers.il2fb-events-parser", "il2fb.demo.bug-reporter"
+      "il2fb.demo.bug-reporter"
+      , "il2fb.parsers.il2fb-events-parser"
     ]
   },
   {
@@ -106,7 +110,8 @@
     "type": "application",
     "state": "planned",
     "requirements": [
-      "il2fb.parsers.il2fb-console-parser", "il2fb.demo.bug-reporter"
+      "il2fb.demo.bug-reporter"
+      , "il2fb.parsers.il2fb-console-parser"
     ]
   },
   {
@@ -121,7 +126,8 @@
     "type": "application",
     "state": "planned",
     "requirements": [
-      "il2fb.ds.il2fb-ds-config", "il2fb.demo.bug-reporter"
+      "il2fb.demo.bug-reporter"
+      , "il2fb.ds.il2fb-ds-config"
     ]
   },
   {
@@ -136,7 +142,8 @@
     "type": "library",
     "state": "ready",
     "requirements": [
-      "il2fb.ds.il2fb-ds-emulator", "tx-logging"
+      "il2fb.ds.il2fb-ds-emulator"
+      , "tx-logging"
     ]
   },
   {
@@ -144,7 +151,9 @@
     "type": "application",
     "state": "freezed",
     "requirements": [
-      "tx-logging", "verboselib", "il2fb.ds.il2fb-ds-middleware"
+      "il2fb.ds.il2fb-ds-middleware"
+      , "tx-logging"
+      , "verboselib"
     ]
   },
   {
@@ -189,10 +198,15 @@
     "type": "application",
     "state": "freezed",
     "requirements": [
-      "tx-logging", "il2fb.ds.il2fb-ds-middleware", "il2fb.il2fb-navigator",
-      "il2fb.il2fb-difficulty", "il2fb.parsers.il2fb-mission-parser",
-      "il2fb.il2fb-commons", "il2fb.parsers.il2fb-events-parser",
-      "il2fb.parsers.il2fb-console-parser", "il2fb.ds.il2fb-ds-config"
+      "tx-logging"
+      , "il2fb.ds.il2fb-ds-config"
+      , "il2fb.ds.il2fb-ds-middleware"
+      , "il2fb.il2fb-commons"
+      , "il2fb.il2fb-difficulty"
+      , "il2fb.il2fb-navigator"
+      , "il2fb.parsers.il2fb-console-parser"
+      , "il2fb.parsers.il2fb-events-parser"
+      , "il2fb.parsers.il2fb-mission-parser"
     ]
   }
 ]

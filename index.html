@@ -109,6 +109,47 @@ $(document).ready(function() {
     //     .attr("d", line)
     //     .style("stroke", "black");
 
+    function activate(element) {
+      element.addClass('active')
+    }
+
+    function deactivate(element) {
+      element.removeClass('active')
+    }
+
+    $('.cell.application, .cell.library').on('click', function() {
+        var self = $(this)
+
+        if (self.hasClass('active')) {
+          deactivate(self)
+        } else {
+          var active = $('.cell.active')
+
+          if (active.length) {
+            deactivate(active)
+          }
+
+          activate(self)
+        }
+
+        // console.log(this) // div
+        // console.log(d3.event.target) // span
+        // console.log(d3.event.target.__data__) // datum
+        // console.log(d) // datum
+
+        // var targets = links
+        //   .filter(function (element) {
+        //     return element.source == d;
+        //   })
+        //   .map(function (element) {
+        //     return element.target
+        //   })
+
+        // console.log(targets)
+
+        // d3.event.preventDefault();
+      })
+
     d3.select(window).on("resize", resize);
 
     function resize() {
@@ -117,8 +158,8 @@ $(document).ready(function() {
       // svg.attr("width", width).attr("height", height);
       treemap.size([width, height]);
 
-      var nodes = treemap.nodes(packages.root(items)),
-          links = packages.requirements(nodes);
+      var nodes = treemap.nodes(packages.root(items));
+          // links = packages.requirements(nodes);
 
       div.selectAll(".cell").data(nodes).call(cell);
       // svg.selectAll(".link").data(bundle(links)).attr("d", line)

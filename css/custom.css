@@ -98,6 +98,7 @@ body {
   color: #FFF;
   background-color: #814568;
   border-right: 1px solid #FFF;
+  z-index: 2;
 
   -webkit-transition: left 0.3s ease-in-out;
   -moz-transition: left 0.3s ease-in-out;
@@ -164,6 +165,22 @@ section.links a:hover {
   position: absolute;
   text-align: center;
   display: table;
+  z-index: 0;
+
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+
+  transition-property: height, width, top, left, background, color;
+}
+.cell:hover {
+  cursor: pointer;
+}
+.cell.active {
+  z-index: 1;
+  box-shadow: 0 0 15px #000;
 }
 
 .cell > span {
@@ -182,25 +199,60 @@ section.links a:hover {
   background: #95CF80;
   color: #0A2A0B;
 }
+.ready:hover, .ready.active {
+  background: #0A2A0B;
+  color: #95CF80;
+}
+.ready.active {
+  border-color: #0A2A0B;
+}
 
 .in-progress {
   background: #F3DA75;
   color: #5F2F15;
+}
+.in-progress:hover, .in-progress.active {
+  background: #752E07;
+  color: #F3DA75;
+}
+.in-progress.active {
+  border-color: #752E07;
 }
 
 .updating {
   background: #C69BF2;
   color: #350E31;
 }
+.updating:hover, .updating.active {
+  background: #350E31;
+  color: #C69BF2;
+}
+.updating.active {
+  border-color: #350E31;
+}
 
 .freezed {
   background: #B4C9F2;
   color: #111F35;
 }
+.freezed:hover, .freezed.active {
+  background: #111F35;
+  color: #B4C9F2;
+}
+.freezed.active {
+  border-color: #111F35;
+}
 
 .planned {
   background: #E0E0E0;
   color: #8F8F8F;
+}
+.planned:hover, .planned.active {
+  background: #333;
+  color: #E0E0E0;
+}
+.planned.active {
+  border-color: #333;
 }
 
 /* Project types ----------------------------------------------------------- */
