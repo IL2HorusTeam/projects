@@ -114,7 +114,6 @@ body {
 header {
   padding: 20px 0;
   text-align: center;
-  margin-bottom: 20px;
   border-bottom: 1px solid #531C3C;
   background-color: #5F2949;
   color: #FFF;
@@ -141,20 +140,97 @@ header legend {
   margin: auto;
 }
 
-section.links {
-  text-align: center;
-  margin-top: 10px;
+section {
+  margin: 15px 0 25px 0;
+  padding: 0 10px;
 }
 
+section > h5 {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  line-height: 16px;
+  color: #C5A2C5;
+  font-size: 14px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+section > h5 span {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  position: relative;
+  padding: 0 10px;
+  text-transform: lowercase;
+}
+section > h5 span:before,
+section > h5 span:after {
+  content: '';
+  display: block;
+  width: 282px;
+  position: absolute;
+  top: 0.7em;
+  border-top: 1px solid #9E699E;
+}
+section > h5 span:before {
+  right: 100%;
+}
+section > h5 span:after {
+  left: 100%;
+}
+
+section.legend div.row {
+  display: inline-block;
+  width: auto;
+  clear: both;
+  font-size: 16px;
+  padding: 0 20px;
+  line-height: 18px;
+}
+section.legend div.col {
+  float: left;
+  display: table-column;
+  cursor: default;
+}
+section.legend div.col.term {
+  width: 70px;
+  font-family: "Fira Sans", sans-serif;
+}
+section.legend div.state {
+  display: inline-block;
+  min-width: 40px;
+  min-height: 12px;
+  margin-bottom: -2px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+section.links {
+  text-align: center;
+}
 section.links a {
   color: #C095C0;
   text-decoration: none;
   padding: 0 5px;
   outline: none;
 }
-
 section.links a:hover {
   color: #FFF;
+}
+
+section.updated-at {
+  text-align: center;
+  font-size: 14px;
+}
+
+section.updated-at a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+section.updated-at a:hover {
+  text-decoration: underline;
 }
 
 /* Diagram ----------------------------------------------------------------- */
@@ -212,12 +288,21 @@ main > div > svg {
   z-index: 0;
 }
 
+/* Project types ----------------------------------------------------------- */
+.application {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.library {
+  text-transform: lowercase;
+}
+
 /* Project states ---------------------------------------------------------- */
 .ready {
   background: #95CF80;
   color: #0A2A0B;
 }
-.ready:hover, .ready.active {
+.ready:not(.state):hover, .ready.active {
   background: #0A2A0B;
   color: #95CF80;
 }
@@ -229,7 +314,7 @@ main > div > svg {
   background: #F3DA75;
   color: #5F2F15;
 }
-.in-progress:hover, .in-progress.active {
+.in-progress:not(.state):hover, .in-progress.active {
   background: #752E07;
   color: #F3DA75;
 }
@@ -241,7 +326,7 @@ main > div > svg {
   background: #C69BF2;
   color: #350E31;
 }
-.updating:hover, .updating.active {
+.updating:not(.state):hover, .updating.active {
   background: #350E31;
   color: #C69BF2;
 }
@@ -253,7 +338,7 @@ main > div > svg {
   background: #B4C9F2;
   color: #111F35;
 }
-.freezed:hover, .freezed.active {
+.freezed:not(.state):hover, .freezed.active {
   background: #111F35;
   color: #B4C9F2;
 }
@@ -265,15 +350,10 @@ main > div > svg {
   background: #E0E0E0;
   color: #8F8F8F;
 }
-.planned:hover, .planned.active {
+.planned:not(.state):hover, .planned.active {
   background: #333;
   color: #E0E0E0;
 }
 .planned.active {
   border-color: #333;
-}
-
-/* Project types ----------------------------------------------------------- */
-.application {
-  font-weight: bold;
 }

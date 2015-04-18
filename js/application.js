@@ -191,4 +191,20 @@ $(document).ready(function() {
     }
   }
 
+  $.get('https://api.github.com/repos/IL2HorusTeam/projects/commits?per_page=1', function(data) {
+    if (data.length) {
+      var object = data[0],
+          commit = object.commit,
+          date = moment(commit.author.date).format('MMM Do, YYYY [at] H:mm')
+
+      $('section.updated-at > .placeholder').empty().append($("<a>", {
+        html: date,
+        href: object.html_url,
+        target: '_blank',
+        title: 'By ' + commit.author.name,
+      }))
+    }
+  }).fail(function() {
+    $('section.updated-at > .placeholder').html('Sorry, failed to load')
+  })
 })
