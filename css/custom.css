@@ -158,6 +158,15 @@ section.links a:hover {
 }
 
 /* Diagram ----------------------------------------------------------------- */
+main > div {
+  position: relative;
+}
+
+main > div > svg {
+  position: absolute;
+  pointer-events: none;
+}
+
 .cell {
   border: solid 1px white;
   font: 14px "Fira Sans", sans-serif;
@@ -196,9 +205,11 @@ section.links a:hover {
 }
 
 .link {
-  stroke: #000;
+  stroke: #2C2C2C;
   stroke-opacity: .5;
   fill: none;
+  display: none;
+  z-index: 0;
 }
 
 /* Project states ---------------------------------------------------------- */

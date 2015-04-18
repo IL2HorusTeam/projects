@@ -14,15 +14,8 @@ $(document).ready(function() {
                 .value(function(d) { return d.size || 1 })
 
   var div = d3.select("main").append("div")
-              .style("position", "relative")
               .style("width", primary_width + "px")
               .style("height", primary_height + "px")
-
-  var line = d3.svg.line()
-      .interpolate("bundle")
-      .tension(.15)
-      .x(function(d) { return d.x + d.dx / 2 })
-      .y(function(d) { return d.y + d.dy / 2 })
 
   d3.json("projects.json", function(error, items) {
     var nodes = treemap.nodes(packages.root(items)),
@@ -48,39 +41,55 @@ $(document).ready(function() {
       }
     })
 
-    // var svg = div.append("svg")
+    var line = d3.svg.line()
+      .interpolate("bundle")
+      .tension(.1)
+      .x(function(d) { return d.x + d.dx / 2 })
+      .y(function(d) { return d.y + d.dy / 2 })
 
-    // svg.style("position", "absolute")
-    //   .attr("width", primary_width)
-    //   .attr("height", primary_height)
-    //   .selectAll(".link")
-    //     .data(bundle(links))
-    //   .enter().append("path")
-    //     .attr("class", "link")
-    //     .attr("d", line)
-    //     .style("stroke", "black")
+    var svg = div.append("svg")
+              .attr("width", primary_width)
+              .attr("height", primary_height)
+
+    svg.selectAll(".link")
+        .data(bundle(links))
+      .enter().append("path")
+        .attr("class", "link")
+        .attr("d", line)
 
     $('.cell:not(.container)').on('click', function() {
 
       function activate(element) {
-        $(element).addClass('active')
+        var dependencies = [],
+            others = []
 
-        var cells = nodes
-          .filter(function (node) {
-            return (
-              node != element.__data__
-              && !node.children
-              && element.__data__.requirements.indexOf(node.name) < 0
-            )
-          })
-          .map(function (node) {
-            return node.__element__
-          })
-        $(cells).hide()
+        nodes.forEach(function(node) {
+          if (node != element.__data__ && !node.children) {
+            (
+              element.__data__.requirements.indexOf(node.name) < 0
+              ? others
+              : dependencies
+            ).push(node)
+          }
+        })
+
+        var current_links = $.grep($('.link'), function (link) {
+          return (
+            link.__data__.indexOf(element.__data__) >= 0
+            && link.__data__.filter(function(node) {
+              return dependencies.indexOf(node) != -1
+            }).length > 0
+          )
+        })
+
+        $(element).addClass('active')
+        $(others.map(function (node) { return node.__element__ })).hide()
+        $(current_links).show()
       }
 
       function deactivate(element) {
         $(element).removeClass('active')
+        $('.link').hide()
         $('.cell').show()
       }
 
@@ -115,15 +124,16 @@ $(document).ready(function() {
     })
 
     function resize() {
-      width = content.width(), height = content.height()
+      var width = content.width(),
+          height = content.height()
+
       div.style("width", width + "px").style("height", height + "px")
-      // svg.attr("width", width).attr("height", height)
+      svg.attr("width", width).attr("height", height)
       treemap.size([width, height])
 
       var nodes = treemap.nodes(packages.root(items))
-
       div.selectAll(".cell").data(nodes).call(cell)
-      // svg.selectAll(".link").data(bundle(links)).attr("d", line)
+      svg.selectAll(".link").data(bundle(links)).attr("d", line)
     }
   })
 
