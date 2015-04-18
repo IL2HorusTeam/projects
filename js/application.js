@@ -4,6 +4,11 @@ $(document).ready(function() {
     $('.sidebar-content').toggleClass('visible')
   })
 
+  var cell_titles = {
+    default: "Click to show relations",
+    active: "Click to hide relations",
+  }
+
   var content = $('.content'),
       primary_width = content.width(),
       primary_height = content.height()
@@ -23,15 +28,22 @@ $(document).ready(function() {
 
     div.selectAll(".cell")
         .data(nodes)
-      .enter().append("div")
+      .enter()
+        .append("div")
         .attr("class", function(d) {
           return d.children
                  ? "cell container"
                  : ["cell", d.type, d.state].join(" ")
         })
-        .call(cell)
+        .attr("title", cell_titles.default)
+          .call(cell)
         .append("span")
-        .text(function(d) { return d.children ? null : d.key })
+          .text(function(d) { return d.children ? null : d.key })
+        .append("div")
+          .attr("class", "about")
+          .attr("title", "Show details")
+        .append("span")
+          .attr("class", "mega-octicon octicon-question")
 
     nodes.forEach(function (node, i) {
       if (!node.children) {
@@ -56,6 +68,37 @@ $(document).ready(function() {
       .enter().append("path")
         .attr("class", "link")
         .attr("d", line)
+
+
+    $('.cell .about').on('click', function(e) {
+      e.stopPropagation()
+
+      var data = this.__data__
+
+      var header = $("<h4>", {
+        class: data.type,
+        text: data.key,
+      })
+
+      var body = $("<p>", {
+        text: '// This is a place to show information about ' + data.key,
+      })
+
+      var popup = $("<div>", {
+        class: 'white-popup',
+      })
+        .append(header)
+        .append(body)
+
+
+      $(this).magnificPopup({
+        items: {
+          src: popup.prop('outerHTML'),
+          type: 'inline'
+        },
+        closeBtnInside: true,
+      }).magnificPopup('open')
+    })
 
     $('.cell:not(.container)').on('click', function() {
 
@@ -82,13 +125,15 @@ $(document).ready(function() {
           )
         })
 
-        $(element).addClass('active')
+        $(element).addClass('active').attr("title", cell_titles.active)
+          .find('.about').show()
         $(others.map(function (node) { return node.__element__ })).hide()
         $(current_links).show()
       }
 
       function deactivate(element) {
-        $(element).removeClass('active')
+        $(element).removeClass('active').attr("title", cell_titles.default)
+          .find('.about').hide()
         $('.link').hide()
         $('.cell').show()
       }
@@ -205,6 +250,6 @@ $(document).ready(function() {
       }))
     }
   }).fail(function() {
-    $('section.updated-at > .placeholder').html('Sorry, failed to load')
+    $('section.updated-at > .placeholder').html('Sorry, failed to load data')
   })
 })
