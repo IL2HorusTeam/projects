@@ -73,23 +73,42 @@ $(document).ready(function() {
     $('.cell .about').on('click', function(e) {
       e.stopPropagation()
 
+      function append_row(key, value) {
+        grid.append(
+          $('<div>', {class: 'div-table-row'})
+          .append($('<div>', {class: 'div-table-col', html: key}))
+          .append($('<div>', {class: 'div-table-col', html: value}))
+        )
+      }
+
       var data = this.__data__
+          , grid = $('<div>', {class: 'div-table'})
+          , requirements = data.requirements !== undefined
+            ? data.requirements.map(function (x) {
+                return '<nobr>' + x.substring(x.lastIndexOf('.') + 1) + '</nobr>'
+              }).join(', ')
+            : ""
+          , home_page = data.home_page !== undefined
+            ? $('<a>', {
+                href: data.home_page,
+                text: "visit home page",
+                class: 'home-page',
+                target: '_blank',
+              })
+            : ""
 
-      var header = $("<h4>", {
-        class: data.type,
-        text: data.key,
-      })
+      append_row('Description', data.description || "N/A")
+      append_row('Type', data.type || "N/A")
+      append_row('State', data.state.replace('-', ' ') || "N/A")
+      append_row('Version', data.version || "N/A")
+      append_row('Requirements', requirements || "N/A")
+      append_row('Home page', home_page || "N/A")
 
-      var body = $("<p>", {
-        text: '// This is a place to show information about ' + data.key,
-      })
-
-      var popup = $("<div>", {
+      var popup = $('<div>', {
         class: 'white-popup',
       })
-        .append(header)
-        .append(body)
-
+        .append($('<h4>', {text: data.key}))
+        .append(grid)
 
       $(this).magnificPopup({
         items: {
