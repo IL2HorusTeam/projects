@@ -1,44 +1,62 @@
 [
   {
     "name": "candv.candv",
+    "description": "candv stands for Constants & Values. It is a little Python library which provides an easy way for creating complex constants.",
+    "home_page": "http://candv.readthedocs.org/en/latest/",
     "type": "library",
     "state": "ready",
+    "version": "1.3.0",
     "requirements": [
     ]
   },
   {
     "name": "candv.django-candv-choices",
+    "description": "Use complex constants built with candv library instead of standard choices fields for Django models.",
+    "home_page": "https://github.com/oblalex/django-candv-choices#django-candv-choices",
     "type": "library",
     "state":"ready",
+    "version": "1.1.3",
     "requirements":[
       "candv.candv"
     ]
   },
   {
     "name": "verboselib",
+    "description": "A little L10N framework for Python libraries and applications.",
+    "home_page": "https://github.com/oblalex/verboselib#verboselib",
     "type": "library",
     "state": "ready",
+    "version": "0.2.0",
     "requirements": [
     ]
   },
   {
     "name": "tx-logging",
+    "description": "A tiny Python library which extends Twisted logging facilities",
+    "home_page": "https://github.com/oblalex/tx-logging#tx-logging",
     "type": "library",
     "state": "ready",
+    "version": "1.0.0",
     "requirements": [
     ]
   },
   {
     "name": "il2fb.demo.bug-reporter",
+    "description": "Creates bug issues on GitHub automatically when an exception occurs. Used by demo pages of libraries.",
+    "home_page": "https://github.com/IL2HorusTeam/bug-reporter",
     "type": "library",
     "state": "ready",
+    "version": "29.12.2014",
     "requirements": [
     ]
   },
   {
     "name": "il2fb.il2fb-commons",
+    "description": "Common helpers and data structures for projects related to IL-2 Forgotten Battles.",
+    "home_page": "https://github.com/IL2HorusTeam/il2fb-commons",
     "type": "library",
     "state": "ready",
+    "version": "0.10.0",
     "requirements": [
       "candv.candv"
       , "verboselib"
@@ -46,8 +64,11 @@
   },
   {
     "name": "il2fb.il2fb-difficulty",
+    "description": "Parser and emitter of difficulty settings of IL-2 Forgotten Battles.",
+    "home_page": "https://github.com/IL2HorusTeam/il2fb-difficulty",
     "type": "library",
     "state": "ready",
+    "version": "1.2.0",
     "requirements": [
       "candv.candv"
       , "il2fb.il2fb-commons"
@@ -56,24 +77,33 @@
   },
   {
     "name": "il2fb.demo.di-2",
+    "description": "Online editor of difficulty settings of IL-2 FB.",
+    "home_page": "https://di-2.herokuapp.com/",
     "type": "application",
     "state": "ready",
+    "version": "16.11.2014",
     "requirements": [
       "il2fb.il2fb-difficulty"
     ]
   },
   {
     "name": "il2fb.parsers.il2fb-mission-parser",
+    "description": "A Python library for parsing mission file of IL-2 Forgotten Battles. It produces detailed information about mission.",
+    "home_page": "http://il-2-missions-parser.readthedocs.org/en/latest/",
     "type": "library",
     "state": "ready",
+    "version": "1.0.0",
     "requirements": [
       "il2fb.il2fb-commons"
     ]
   },
   {
     "name": "il2fb.demo.il2fb-mission-parser-demo",
+    "description": "Demo application for il2fb-mission-parser library.",
+    "home_page": "http://il2fb-mission-parser-demo.herokuapp.com/",
     "type": "application",
     "state": "ready",
+    "version": "09.11.2014",
     "requirements": [
       "il2fb.demo.bug-reporter"
       , "il2fb.parsers.il2fb-mission-parser"
@@ -81,8 +111,11 @@
   },
   {
     "name": "il2fb.parsers.il2fb-events-parser",
+    "description": "Parses events from log file produced by IL-2 FB Dedicated Server",
+    "home_page": "https://github.com/IL2HorusTeam/il2fb-events-parser#il-2-fb-events-parser",
     "type": "library",
     "state": "ready",
+    "version": "0.11.0",
     "requirements": [
       "candv.candv"
       , "il2fb.il2fb-commons"
@@ -91,8 +124,11 @@
   },
   {
     "name": "il2fb.demo.il2fb-events-parser-demo",
+    "description": "Demo application of il2fb-events-parser library",
+    "home_page": "http://il2fb-events-parser-demo.herokuapp.com/",
     "type": "application",
     "state": "ready",
+    "version": "17.01.2015",
     "requirements": [
       "il2fb.demo.bug-reporter"
       , "il2fb.parsers.il2fb-events-parser"
@@ -100,6 +136,7 @@
   },
   {
     "name": "il2fb.parsers.il2fb-console-parser",
+    "description": "Parse output of IL-2 FB Dedicated Server console",
     "type": "library",
     "state": "planned",
     "requirements": [
@@ -107,6 +144,7 @@
   },
   {
     "name": "il2fb.demo.il2fb-console-parser-demo",
+    "description": "Demo application of il2fb-console-parser library",
     "type": "application",
     "state": "planned",
     "requirements": [
@@ -116,6 +154,7 @@
   },
   {
     "name": "il2fb.ds.il2fb-ds-config",
+    "description": "Library for working with IL-2 FB Dedicated Server settings.",
     "type": "library",
     "state": "in-progress",
     "requirements": [
@@ -123,6 +162,7 @@
   },
   {
     "name": "il2fb.demo.ci-2",
+    "description": "Online editor of settings for IL-2 FB Dedicated Server.",
     "type": "application",
     "state": "planned",
     "requirements": [
@@ -132,6 +172,7 @@
   },
   {
     "name": "il2fb.ds.il2fb-ds-emulator",
+    "description": "Emulates of IL-2 FB Dedicated Server to run tests very fast.",
     "type": "library",
     "state": "planned",
     "requirements": [
@@ -139,8 +180,11 @@
   },
   {
     "name": "il2fb.ds.il2fb-ds-middleware",
+    "description": "High-level wrapper of quite primitive API of IL-2 FB Dedicated Server.",
+    "home_page": "https://github.com/IL2HorusTeam/il2ds-middleware#il-2-fb-dedicated-server-middleware",
     "type": "library",
     "state": "ready",
+    "version": "0.10.3",
     "requirements": [
       "il2fb.ds.il2fb-ds-emulator"
       , "tx-logging"
@@ -148,8 +192,11 @@
   },
   {
     "name": "il2fb.commander.minic",
+    "description": "Minicommander for IL-2 FB Dedicated Server.",
+    "home_page": "https://github.com/IL2HorusTeam/minic#minic",
     "type": "application",
     "state": "freezed",
+    "version": "0.1.12",
     "requirements": [
       "il2fb.ds.il2fb-ds-middleware"
       , "tx-logging"
@@ -158,14 +205,18 @@
   },
   {
     "name": "il2fb.il2fb-heightmap-creator",
+    "description": "A distributed Python application with client-server architecture for making height maps of IL-2 FB locations.",
+    "home_page": "https://github.com/IL2HorusTeam/il2-heightmap-creator#il-2-heightmap-creator",
     "type": "application",
     "state": "ready",
+    "version": "21.05.2014",
     "requirements": [
       "il2fb.ds.il2fb-ds-middleware"
     ]
   },
   {
     "name": "il2fb.il2fb-navigator",
+    "description": "Library for working with IL-2 FB locations online",
     "type": "library",
     "state": "planned",
     "requirements": [
@@ -173,6 +224,7 @@
   },
   {
     "name": "il2fb.il2fb-fuselage",
+    "description": "Core/skeleton for commanders of IL-2 FB Dedicated Server",
     "type": "library",
     "state": "planned",
     "requirements": [
@@ -180,6 +232,8 @@
   },
   {
     "name": "il2fb.il2fb-gennadich-adapter",
+    "description": "Python DB mappings for IL-2 Server Commander created by Gennadich Team.",
+    "home_page": "https://github.com/IL2HorusTeam/il2fb-gennadich-adapter",
     "type": "library",
     "state": "planned",
     "requirements": [
@@ -187,16 +241,22 @@
   },
   {
     "name": "il2fb.web-map-tools",
+    "description": "Online application for working with IL-2 FB locations",
+    "home_page": "http://il2horusteam.github.io/web-map-tools",
     "type": "application",
     "state": "freezed",
+    "version": "0.6.3",
     "requirements": [
       "il2fb.il2fb-navigator"
     ]
   },
   {
     "name": "il2fb.commander.il2ds-events-commander",
+    "description": "A software system for staging online historical events on IL-2 FB Dedicated Server.",
+    "home_page": "https://github.com/IL2HorusTeam/il2ds-events-commander#il-2-ds-events-commander",
     "type": "application",
     "state": "freezed",
+    "version": "09.04.2014",
     "requirements": [
       "tx-logging"
       , "il2fb.ds.il2fb-ds-config"
