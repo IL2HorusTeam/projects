@@ -5,8 +5,8 @@ $(document).ready(function() {
   })
 
   var cell_titles = {
-    default: "Click to show relations",
-    active: "Click to hide relations",
+    default: "Click to show requirements",
+    active: "Click to hide requirements",
   }
 
   var content = $('.content'),
@@ -102,39 +102,59 @@ $(document).ready(function() {
 
     $('.cell:not(.container)').on('click', function() {
 
-      function activate(element) {
-        var dependencies = [],
-            others = []
-
-        nodes.forEach(function(node) {
-          if (node != element.__data__ && !node.children) {
-            (
-              element.__data__.requirements.indexOf(node.name) < 0
-              ? others
-              : dependencies
-            ).push(node)
-          }
+      function show_requirements(root) {
+        var requirements = nodes.filter(function(node) {
+          return (
+            node != root.__data__
+            && !node.children
+            && root.__data__.requirements.indexOf(node.name) >= 0
+          )
         })
+
+        if (!requirements.length) {
+          return
+        }
 
         var current_links = $.grep($('.link'), function (link) {
           return (
-            link.__data__.indexOf(element.__data__) >= 0
+            link.__data__.indexOf(root.__data__) >= 0
             && link.__data__.filter(function(node) {
-              return dependencies.indexOf(node) != -1
+              return requirements.indexOf(node) != -1
             }).length > 0
           )
         })
 
+        requirements = requirements.map(function (node) {
+          return node.__element__
+        })
+
+        $(requirements).show()
+        $(current_links).show()
+
+        requirements.map(show_requirements)
+
+        return {
+          'requirements': requirements,
+          'links': current_links,
+        }
+      }
+
+      function activate(element) {
+        $('.cell').hide()
+        $(element).show()
         $(element).addClass('active').attr("title", cell_titles.active)
           .find('.about').show()
-        $(others.map(function (node) { return node.__element__ })).hide()
-        $(current_links).show()
+
+        info = show_requirements(element)
+        if (info !== undefined) {
+          $(info.links).attr('class', 'link direct')
+        }
       }
 
       function deactivate(element) {
         $(element).removeClass('active').attr("title", cell_titles.default)
           .find('.about').hide()
-        $('.link').hide()
+        $('.link').attr('class', 'link').hide()
         $('.cell').show()
       }
 

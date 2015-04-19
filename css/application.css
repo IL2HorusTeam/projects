@@ -295,11 +295,14 @@ main > div > svg {
 }
 
 .link {
-  stroke: #2C2C2C;
+  stroke: #5F5F5F;
   stroke-opacity: .5;
   fill: none;
   display: none;
   z-index: 0;
+}
+.link.direct {
+  stroke: #F00;
 }
 
 /* Project types ----------------------------------------------------------- */
