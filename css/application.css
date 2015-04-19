@@ -98,6 +98,7 @@ body {
   color: #FFF;
   background-color: #814568;
   border-right: 1px solid #FFF;
+  overflow-y: auto;
   z-index: 2;
 
   -webkit-transition: left 0.3s ease-in-out;
@@ -127,8 +128,9 @@ header .main {
 
 header .controls {
   width: 42px;
-  float: right;
   padding-top: 3px;
+  position: absolute;
+  right: 0px;
 }
 
 header h3 {
@@ -302,7 +304,20 @@ main > div > svg {
   z-index: 0;
 }
 .link.direct {
-  stroke: #F00;
+  stroke: #F51111;
+  stroke-opacity: .6;
+}
+
+hr.link-type {
+  position: relative;
+  top: 1px;
+  margin-left: 0px;
+  width: 40px;
+  border: 1px solid #CECECE;
+}
+
+hr.link-type.direct {
+  border-color: #F00;
 }
 
 /* Project types ----------------------------------------------------------- */
