@@ -31,11 +31,21 @@
     ]
   },
   {
-    "name": "tx-logging",
+    "name": "logging.tx-logging",
     "description": "A tiny Python library which extends Twisted logging facilities",
     "home_page": "https://github.com/oblalex/tx-logging#tx-logging",
     "type": "library",
     "state": "ready",
+    "version": "1.0.0",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "logging.isotopic-logging",
+    "description": "A Python library which allows to mark and trace events in log alike isotopic labeling.",
+    "home_page": "https://github.com/oblalex/isotopic-logging#isotopic-logging",
+    "type": "library",
+    "state": "in-progress",
     "version": "1.0.0",
     "requirements": [
     ]
@@ -156,7 +166,7 @@
     "name": "il2fb.ds.il2fb-ds-config",
     "description": "Library for working with IL-2 FB Dedicated Server settings.",
     "type": "library",
-    "state": "in-progress",
+    "state": "planned",
     "requirements": [
     ]
   },
@@ -187,7 +197,7 @@
     "version": "0.10.3",
     "requirements": [
       "il2fb.ds.il2fb-ds-emulator"
-      , "tx-logging"
+      , "logging.tx-logging"
     ]
   },
   {
@@ -199,7 +209,7 @@
     "version": "0.1.12",
     "requirements": [
       "il2fb.ds.il2fb-ds-middleware"
-      , "tx-logging"
+      , "logging.tx-logging"
       , "verboselib"
     ]
   },
@@ -258,7 +268,7 @@
     "state": "freezed",
     "version": "09.04.2014",
     "requirements": [
-      "tx-logging"
+      "logging.tx-logging"
       , "il2fb.ds.il2fb-ds-config"
       , "il2fb.ds.il2fb-ds-middleware"
       , "il2fb.il2fb-commons"
