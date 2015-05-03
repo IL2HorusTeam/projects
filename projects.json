@@ -45,7 +45,7 @@
     "description": "A Python library which allows to mark and trace events in log alike isotopic labeling.",
     "home_page": "https://github.com/oblalex/isotopic-logging#isotopic-logging",
     "type": "library",
-    "state": "in-progress",
+    "state": "ready",
     "version": "1.0.0",
     "requirements": [
     ]
@@ -166,7 +166,7 @@
     "name": "il2fb.ds.il2fb-ds-config",
     "description": "Library for working with IL-2 FB Dedicated Server settings.",
     "type": "library",
-    "state": "planned",
+    "state": "in-progress",
     "requirements": [
     ]
   },
@@ -174,7 +174,7 @@
     "name": "il2fb.demo.ci-2",
     "description": "Online editor of settings for IL-2 FB Dedicated Server.",
     "type": "application",
-    "state": "planned",
+    "state": "in-progress",
     "requirements": [
       "il2fb.demo.bug-reporter"
       , "il2fb.ds.il2fb-ds-config"
