@@ -65,7 +65,7 @@
     "description": "Common helpers and data structures for projects related to IL-2 Forgotten Battles.",
     "home_page": "https://github.com/IL2HorusTeam/il2fb-commons",
     "type": "library",
-    "state": "ready",
+    "state": "updating",
     "version": "0.10.0",
     "requirements": [
       "candv.candv"
@@ -77,7 +77,7 @@
     "description": "Parser and emitter of difficulty settings of IL-2 Forgotten Battles.",
     "home_page": "https://github.com/IL2HorusTeam/il2fb-difficulty",
     "type": "library",
-    "state": "ready",
+    "state": "updating",
     "version": "1.2.0",
     "requirements": [
       "candv.candv"
@@ -171,16 +171,6 @@
     ]
   },
   {
-    "name": "il2fb.demo.ci-2",
-    "description": "Online editor of settings for IL-2 FB Dedicated Server.",
-    "type": "application",
-    "state": "in-progress",
-    "requirements": [
-      "il2fb.demo.bug-reporter"
-      , "il2fb.ds.il2fb-ds-config"
-    ]
-  },
-  {
     "name": "il2fb.ds.il2fb-ds-emulator",
     "description": "Emulates of IL-2 FB Dedicated Server to run tests very fast.",
     "type": "library",
@@ -205,7 +195,7 @@
     "description": "Minicommander for IL-2 FB Dedicated Server.",
     "home_page": "https://github.com/IL2HorusTeam/minic#minic",
     "type": "application",
-    "state": "freezed",
+    "state": "updating",
     "version": "0.1.12",
     "requirements": [
       "il2fb.ds.il2fb-ds-middleware"
