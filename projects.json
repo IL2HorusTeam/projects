@@ -28,8 +28,8 @@
     "state":"ready",
     "version": "1.0.0",
     "requirements":[
-      "candv.candv",
-      "candv.django-candv-choices",
+      "candv.candv"
+      , "candv.django-candv-choices"
     ]
   },
   {
