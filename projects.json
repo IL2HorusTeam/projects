@@ -164,16 +164,6 @@
     ]
   },
   {
-    "name": "il2fb.demo.il2fb-console-parser-demo",
-    "description": "Demo application of il2fb-console-parser library",
-    "type": "application",
-    "state": "planned",
-    "requirements": [
-      "il2fb.demo.bug-reporter"
-      , "il2fb.parsers.il2fb-console-parser"
-    ]
-  },
-  {
     "name": "il2fb.ds.il2fb-ds-config",
     "description": "Library for working with IL-2 FB Dedicated Server settings.",
     "type": "library",
