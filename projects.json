@@ -133,10 +133,10 @@
   {
     "name": "il2fb.parsers.il2fb-events-parser",
     "description": "Parses events from log file produced by IL-2 FB Dedicated Server",
-    "home_page": "https://github.com/IL2HorusTeam/il2fb-events-parser#il-2-fb-events-parser",
+    "home_page": "http://il2horusteam.github.io/il2fb-events-parser/",
     "type": "library",
     "state": "ready",
-    "version": "0.11.0",
+    "version": "1.0.0.dev0",
     "requirements": [
       "candv.candv"
       , "il2fb.il2fb-commons"
@@ -160,14 +160,6 @@
     ]
   },
   {
-    "name": "il2fb.ds.il2fb-ds-emulator",
-    "description": "Emulates of IL-2 FB Dedicated Server to run tests very fast.",
-    "type": "library",
-    "state": "planned",
-    "requirements": [
-    ]
-  },
-  {
     "name": "il2fb.ds.il2fb-ds-middleware",
     "description": "High-level wrapper of quite primitive API of IL-2 FB Dedicated Server.",
     "home_page": "https://github.com/IL2HorusTeam/il2ds-middleware#il-2-fb-dedicated-server-middleware",
@@ -175,8 +167,7 @@
     "state": "ready",
     "version": "0.10.3",
     "requirements": [
-      "il2fb.ds.il2fb-ds-emulator"
-      , "logging.tx-logging"
+      "logging.tx-logging"
     ]
   },
   {
