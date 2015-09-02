@@ -133,14 +133,26 @@
   {
     "name": "il2fb.parsers.il2fb-events-parser",
     "description": "Parses events from log file produced by IL-2 FB Dedicated Server",
-    "home_page": "http://il2horusteam.github.io/il2fb-events-parser/",
+    "home_page": "https://github.com/IL2HorusTeam/il2fb-events-parser#il-2-fb-events-parser",
     "type": "library",
     "state": "ready",
-    "version": "1.0.0.dev0",
+    "version": "0.11.0",
     "requirements": [
       "candv.candv"
       , "il2fb.il2fb-commons"
       , "verboselib"
+    ]
+  },
+  {
+    "name": "il2fb.demo.il2fb-events-parser-demo",
+    "description": "Demo application of il2fb-events-parser library",
+    "home_page": "http://il2fb-events-parser-demo.herokuapp.com/",
+    "type": "application",
+    "state": "ready",
+    "version": "17.01.2015",
+    "requirements": [
+      "il2fb.demo.bug-reporter"
+      , "il2fb.parsers.il2fb-events-parser"
     ]
   },
   {
@@ -154,6 +166,14 @@
   {
     "name": "il2fb.ds.il2fb-ds-config",
     "description": "Library for working with IL-2 FB Dedicated Server settings.",
+    "type": "library",
+    "state": "planned",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "il2fb.ds.il2fb-ds-emulator",
+    "description": "Emulates of IL-2 FB Dedicated Server to run tests very fast.",
     "type": "library",
     "state": "planned",
     "requirements": [
