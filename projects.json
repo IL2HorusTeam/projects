@@ -144,18 +144,6 @@
     ]
   },
   {
-    "name": "il2fb.demo.il2fb-events-parser-demo",
-    "description": "Demo application of il2fb-events-parser library",
-    "home_page": "http://il2fb-events-parser-demo.herokuapp.com/",
-    "type": "application",
-    "state": "ready",
-    "version": "17.01.2015",
-    "requirements": [
-      "il2fb.demo.bug-reporter"
-      , "il2fb.parsers.il2fb-events-parser"
-    ]
-  },
-  {
     "name": "il2fb.parsers.il2fb-console-parser",
     "description": "Parse output of IL-2 FB Dedicated Server console",
     "type": "library",
