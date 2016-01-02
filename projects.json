@@ -112,22 +112,10 @@
     "description": "A Python library for parsing mission file of IL-2 Forgotten Battles. It produces detailed information about mission.",
     "home_page": "http://il-2-missions-parser.readthedocs.org/en/latest/",
     "type": "library",
-    "state": "ready",
-    "version": "1.0.0",
+    "state": "updating",
+    "version": "1.1.0.dev0",
     "requirements": [
       "il2fb.il2fb-commons"
-    ]
-  },
-  {
-    "name": "il2fb.demo.il2fb-mission-parser-demo",
-    "description": "Demo application for il2fb-mission-parser library.",
-    "home_page": "http://il2fb-mission-parser-demo.herokuapp.com/",
-    "type": "application",
-    "state": "ready",
-    "version": "09.11.2014",
-    "requirements": [
-      "il2fb.demo.bug-reporter"
-      , "il2fb.parsers.il2fb-mission-parser"
     ]
   },
   {
