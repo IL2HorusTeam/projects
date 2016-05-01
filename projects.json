@@ -163,7 +163,7 @@
     "description": "Minicommander for IL-2 FB Dedicated Server.",
     "home_page": "https://github.com/IL2HorusTeam/minic#minic",
     "type": "application",
-    "state": "freezed",
+    "state": "ready",
     "version": "0.1.12",
     "requirements": [
       "il2fb.ds.il2fb-ds-middleware"
@@ -212,8 +212,8 @@
     "description": "Online application for working with IL-2 FB locations",
     "home_page": "http://il2horusteam.github.io/web-map-tools",
     "type": "application",
-    "state": "freezed",
-    "version": "0.6.3",
+    "state": "ready",
+    "version": "0.9.0",
     "requirements": [
       "il2fb.il2fb-navigator"
     ]
