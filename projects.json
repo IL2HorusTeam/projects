@@ -160,7 +160,7 @@
     "name": "il2fb.ds.il2fb-ds-config",
     "description": "Library for working with IL-2 FB Dedicated Server settings.",
     "type": "library",
-    "state": "in progress",
+    "state": "in-progress",
     "requirements": [
     ]
   },
