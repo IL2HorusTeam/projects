@@ -77,8 +77,8 @@
     "description": "Services used for demonstration of usage of libraries created by IL2HorusTeam.",
     "home_page": "https://github.com/IL2HorusTeam/demo-services",
     "type": "application",
-    "state": "updating",
-    "version": "14.10.2016",
+    "state": "ready",
+    "version": "28.10.2016",
     "requirements": [
         "il2fb.demo.bug-reporter"
       , "il2fb.il2fb-commons"
@@ -92,7 +92,7 @@
     "description": "Common helpers and data structures for projects related to IL-2 Forgotten Battles.",
     "home_page": "https://github.com/IL2HorusTeam/il2fb-commons",
     "type": "library",
-    "state": "updating",
+    "state": "ready",
     "version": "0.11.0.dev3",
     "requirements": [
         "candv.candv"
@@ -160,7 +160,7 @@
     "name": "il2fb.ds.il2fb-ds-config",
     "description": "Library for working with IL-2 FB Dedicated Server settings.",
     "type": "library",
-    "state": "planned",
+    "state": "in progress",
     "requirements": [
     ]
   },
