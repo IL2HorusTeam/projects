@@ -140,8 +140,8 @@
     "description": "Parses events from log file produced by IL-2 FB Dedicated Server",
     "home_page": "http://il2horusteam.github.io/il2fb-events-parser/",
     "type": "library",
-    "state": "updating",
-    "version": "1.0.0.dev0",
+    "state": "ready",
+    "version": "1.0.0",
     "requirements": [
         "candv.candv"
       , "il2fb.il2fb-commons"
