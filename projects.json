@@ -141,7 +141,7 @@
     "home_page": "http://il2horusteam.github.io/il2fb-events-parser/",
     "type": "library",
     "state": "updating",
-    "version": "1.0.0.dev1",
+    "version": "1.0.0.dev0",
     "requirements": [
         "candv.candv"
       , "il2fb.il2fb-commons"
