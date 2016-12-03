@@ -253,5 +253,32 @@
       , "il2fb.parsers.il2fb-events-parser"
       , "il2fb.parsers.il2fb-mission-parser"
     ]
+  },
+  {
+    "name": "os.service.il2dsd",
+    "description": "IL-2 FB dedicated server as Unix daemon",
+    "home_page": "https://github.com/IL2HorusTeam/il2dsd",
+    "type": "application",
+    "state": "ready",
+    "requirements": [
+    ]
+  },
+  {
+    "name": "os.service.docker.docker-wine",
+    "description": "Docker image of Ubuntu with Wine",
+    "home_page": "https://github.com/IL2HorusTeam/docker-wine",
+    "type": "application",
+    "state": "ready",
+    "requirements": [
+    ]
+  },
+    {
+    "name": "os.service.docker.docker-il2ds",
+    "description": "Docker image of Ubuntu with IL-2 FB dedicated server",
+    "home_page": "https://hub.docker.com/r/il2horusteam/il2ds/",
+    "type": "application",
+    "state": "ready",
+    "requirements": [
+    ]
   }
 ]
