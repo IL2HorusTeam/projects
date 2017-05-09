@@ -250,7 +250,6 @@
       , "il2fb.il2fb-commons"
       , "il2fb.il2fb-difficulty"
       , "il2fb.il2fb-navigator"
-      , "il2fb.parsers.il2fb-console-parser"
       , "il2fb.parsers.il2fb-events-parser"
       , "il2fb.parsers.il2fb-mission-parser"
     ]
