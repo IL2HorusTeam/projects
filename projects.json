@@ -77,7 +77,7 @@
     "description": "Services used for demonstration of usage of libraries created by IL2HorusTeam.",
     "home_page": "https://github.com/IL2HorusTeam/demo-services",
     "type": "application",
-    "state": "in-progress",
+    "state": "ready",
     "version": "2.0.0",
     "requirements": [
         "il2fb.demo.il2fb-github-bug-reporter"
@@ -103,7 +103,7 @@
   {
     "name": "il2fb.il2fb-difficulty",
     "description": "Parser and emitter of difficulty settings of IL-2 Forgotten Battles.",
-    "home_page": "http://il2horusteam.github.io/il2fb-difficulty",
+    "home_page": "https://github.com/IL2HorusTeam/il2fb-difficulty",
     "type": "library",
     "state": "ready",
     "version": "1.3.0",
@@ -113,6 +113,17 @@
       , "verboselib"
     ]
   },
+  {
+    "name": "il2fb.il2fb-difficulty-editor",
+    "description": "Editor of difficulty settings of IL-2 Forgotten Battles.",
+    "home_page": "http://il2horusteam.github.io/il2fb-difficulty/",
+    "type": "application",
+    "state": "ready",
+    "requirements": [
+        "il2fb.il2fb-difficulty"
+      , "il2fb.demo.demo-services"
+    ]
+  },  
   {
     "name": "il2fb.il2fb-regiments",
     "description": "A Python library for accessing regiments of IL-2 Forgotten Battles flight simulator.",
@@ -152,17 +163,29 @@
   {
     "name": "il2fb.ds.il2fb-ds-config",
     "description": "Library for working with IL-2 FB Dedicated Server settings.",
+    "home_page": "https://github.com/IL2HorusTeam/il2fb-ds-config",
     "type": "library",
-    "state": "in-progress",
+    "state": "ready",
     "requirements": [
     ]
   },
+  {
+    "name": "il2fb.ds.il2fb-ds-ce",
+    "description": "configuration editor for dedicated server of «IL‑2 Sturmovik: Forgotten Battles» aviasimulator.",
+    "home_page": "https://il2horusteam.github.io/il2fb-ds-config/",
+    "type": "application",
+    "state": "ready",
+    "requirements": [
+        "il2fb.demo.demo-services"
+      , "il2fb.ds.il2fb-ds-config"
+    ]
+  },  
   {
     "name": "il2fb.ds.il2fb-ds-middleware",
     "description": "High-level wrapper of quite primitive API of IL-2 FB Dedicated Server.",
     "home_page": "https://github.com/IL2HorusTeam/il2ds-middleware#il-2-fb-dedicated-server-middleware",
     "type": "library",
-    "state": "ready",
+    "state": "updating",
     "version": "0.10.3",
     "requirements": [
       "logging.tx-logging"
