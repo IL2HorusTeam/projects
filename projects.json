@@ -188,7 +188,8 @@
     "state": "updating",
     "version": "1.0.0",
     "requirements": [
-      "logging.tx-logging"
+        "candv.candv"
+      , "il2fb.il2fb-commons"
     ]
   },
   {
