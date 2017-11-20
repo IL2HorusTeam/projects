@@ -186,7 +186,7 @@
     "description": "High-level wrapper of quite primitive API of IL-2 FB Dedicated Server.",
     "home_page": "https://github.com/IL2HorusTeam/il2ds-middleware#il-2-fb-dedicated-server-middleware",
     "type": "library",
-    "state": "in progress",
+    "state": "updating",
     "version": "1.0.0",
     "requirements": [
         "candv.candv"
@@ -229,7 +229,7 @@
     "name": "il2fb.il2fb-airbridge",
     "description": "Wrapper of Dedicated Server, which provides high-level API for humans",
     "type": "application",
-    "state": "ready",
+    "state": "in-progress",
     "requirements": [
         "il2fb.ds.il2fb-ds-middleware"
       , "il2fb.il2fb-commons"
