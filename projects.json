@@ -228,6 +228,8 @@
   {
     "name": "il2fb.il2fb-airbridge",
     "description": "Wrapper of Dedicated Server, which provides high-level API for humans",
+    "home_page": "https://github.com/IL2HorusTeam/il2fb-ds-airbridge",
+    "version": "1.0.0",
     "type": "application",
     "state": "in-progress",
     "requirements": [
