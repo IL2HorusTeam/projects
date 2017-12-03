@@ -83,7 +83,7 @@
         "il2fb.demo.il2fb-github-bug-reporter"
       , "il2fb.il2fb-commons"
       , "il2fb.il2fb-difficulty"
-      , "il2fb.parsers.il2fb-events-parser"
+      , "il2fb.parsers.il2fb-game-log-parser"
       , "il2fb.parsers.il2fb-mission-parser"
       , "il2fb.ds.il2fb-ds-config"
     ]
@@ -94,7 +94,7 @@
     "home_page": "https://github.com/IL2HorusTeam/il2fb-commons",
     "type": "library",
     "state": "ready",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "requirements": [
         "candv.candv"
       , "verboselib"
@@ -148,9 +148,9 @@
     ]
   },
   {
-    "name": "il2fb.parsers.il2fb-events-parser",
+    "name": "il2fb.parsers.il2fb-game-log-parser",
     "description": "Parses events from log file produced by IL-2 FB Dedicated Server",
-    "home_page": "http://il2horusteam.github.io/il2fb-events-parser/",
+    "home_page": "http://il2horusteam.github.io/il2fb-game-log-parser/",
     "type": "library",
     "state": "ready",
     "version": "1.0.2",
@@ -186,7 +186,7 @@
     "description": "High-level wrapper of quite primitive API of IL-2 FB Dedicated Server.",
     "home_page": "https://github.com/IL2HorusTeam/il2ds-middleware#il-2-fb-dedicated-server-middleware",
     "type": "library",
-    "state": "updating",
+    "state": "ready",
     "version": "1.0.0",
     "requirements": [
         "candv.candv"
@@ -207,18 +207,26 @@
     ]
   },
   {
-    "name": "il2fb.il2fb-heightmap-creator",
+    "name": "il2fb.maps.il2fb-heightmap-creator",
     "description": "A distributed Python application with client-server architecture for making height maps of IL-2 FB locations.",
     "home_page": "https://github.com/IL2HorusTeam/il2-heightmap-creator#il-2-heightmap-creator",
     "type": "application",
-    "state": "updating",
-    "version": "21.05.2014",
+    "state": "ready",
+    "version": "1.0.0",
     "requirements": [
-      "il2fb.ds.il2fb-ds-middleware"
+      "il2fb.ds.il2fb-airbridge"
     ]
   },
   {
-    "name": "il2fb.il2fb-navigator",
+    "name": "il2fb.maps.il2fb-plains-detector",
+    "description": "Detects plain areas which are suitable for placing groups of objects on locations",
+    "type": "application",
+    "state": "planned",
+    "requirements": [
+    ]
+  }, 
+  {
+    "name": "il2fb.maps.il2fb-navigator",
     "description": "Library for working with IL-2 FB locations online",
     "type": "library",
     "state": "planned",
@@ -226,7 +234,7 @@
     ]
   },
   {
-    "name": "il2fb.il2fb-airbridge",
+    "name": "il2fb.ds.il2fb-airbridge",
     "description": "Wrapper of Dedicated Server, which provides high-level API for humans",
     "home_page": "https://github.com/IL2HorusTeam/il2fb-ds-airbridge",
     "version": "1.0.0",
@@ -235,13 +243,13 @@
     "requirements": [
         "il2fb.ds.il2fb-ds-middleware"
       , "il2fb.il2fb-commons"
-      , "il2fb.parsers.il2fb-events-parser"
+      , "il2fb.parsers.il2fb-game-log-parser"
       , "il2fb.parsers.il2fb-mission-parser"
       , "il2fb.ds.il2fb-ds-config"
     ]
   },
   {
-    "name": "il2fb.il2fb-fuselage",
+    "name": "il2fb.commander.il2fb-fuselage",
     "description": "Core/skeleton for commanders of IL-2 FB Dedicated Server",
     "type": "library",
     "state": "planned",
@@ -249,7 +257,7 @@
     ]
   },  
   {
-    "name": "il2fb.il2fb-gennadich-adapter",
+    "name": "il2fb.commander.il2fb-gennadich-adapter",
     "description": "Python DB mappings for IL-2 Server Commander created by Gennadich Team.",
     "home_page": "https://github.com/IL2HorusTeam/il2fb-gennadich-adapter",
     "type": "library",
@@ -258,14 +266,13 @@
     ]
   },
   {
-    "name": "il2fb.web-map-tools",
+    "name": "il2fb.maps.web-map-tools",
     "description": "Online application for working with IL-2 FB locations",
     "home_page": "http://il2horusteam.github.io/web-map-tools",
     "type": "application",
     "state": "ready",
     "version": "0.9.0",
     "requirements": [
-      "il2fb.il2fb-navigator"
     ]
   },
   {
@@ -281,8 +288,7 @@
       , "il2fb.ds.il2fb-ds-middleware"
       , "il2fb.il2fb-commons"
       , "il2fb.il2fb-difficulty"
-      , "il2fb.il2fb-navigator"
-      , "il2fb.parsers.il2fb-events-parser"
+      , "il2fb.parsers.il2fb-game-log-parser"
       , "il2fb.parsers.il2fb-mission-parser"
     ]
   },
