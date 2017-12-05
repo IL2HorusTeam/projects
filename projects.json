@@ -218,8 +218,8 @@
     ]
   },
   {
-    "name": "il2fb.maps.il2fb-plains-detector",
-    "description": "Detects plain areas which are suitable for placing groups of objects on locations",
+    "name": "il2fb.maps.il2fb-flatland-detector",
+    "description": "Detects flatlands which are suitable for placing groups of objects on locations",
     "type": "application",
     "state": "planned",
     "requirements": [
